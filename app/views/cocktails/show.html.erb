@@ -12,3 +12,10 @@
 
 
 
+<%= simple_form_for [@cocktail] do |f| %>
+  <%= f.input :doses %>
+  <%= f.association :ingredients %>
+  <%= f.submit "add a dose", class: "btn btn-primary",
+      method: :update,
+      data: { confirm: "Are you sure?" }  %>
+<% end %>
