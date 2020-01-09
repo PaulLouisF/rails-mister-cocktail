@@ -12,3 +12,9 @@
 
 <%= render partial:"doses/new", cocktail: @cocktail, dose: @dose %>
 
+
+<% @cocktail.reviews.each do |review| %>
+  <%= review.content  %>
+<% end %>
+
+
